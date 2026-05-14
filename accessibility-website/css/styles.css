@@ -1,0 +1,769 @@
+/* ==================== RESET AND BASE STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+/* ==================== ACCESSIBILITY FEATURES ==================== */
+/* Skip to main content link - visible on focus for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ==================== LAYOUT UTILITIES ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ==================== HEADER SECTION ==================== */
+.site-header {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+/* Main Navigation */
+.main-nav {
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #555555;
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.nav-link.active {
+    background-color: #000000;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.main-content {
+    min-height: calc(100vh - 200px);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    background: linear-gradient(135deg, #F5F5F5 0%, #D9D9D9 100%);
+    padding: 64px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    color: #333333;
+}
+
+/* ==================== BUTTONS ==================== */
+.cta-button {
+    display: inline-block;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: 2px solid #333333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #000000;
+    border-color: #000000;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+    transform: translateY(-2px);
+}
+
+/* ==================== FEATURES SECTION WITH CSS GRID ==================== */
+.features-section {
+    padding: 64px 0;
+    background-color: #FFFFFF;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 48px;
+    color: #000000;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    color: #333333;
+}
+
+/* CSS Grid for responsive layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.feature-card {
+    background-color: #F5F5F5;
+    padding: 32px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover,
+.feature-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #333333;
+}
+
+.feature-title {
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.feature-description {
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* ==================== VIDEO SECTION ==================== */
+.video-section {
+    padding: 64px 0;
+    background-color: #F5F5F5;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+}
+
+.community-video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: #000000;
+}
+
+/* Video Controls */
+.video-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+}
+
+.control-btn {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover,
+.control-btn:focus {
+    background-color: #000000;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.volume-slider {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #333333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #333333;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.volume-slider:focus {
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+/* ==================== CTA SECTION ==================== */
+.cta-section {
+    padding: 64px 0;
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.cta-title {
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.cta-description {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 1.125rem;
+}
+
+.cta-section .cta-button {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-color: #FFFFFF;
+}
+
+.cta-section .cta-button:hover,
+.cta-section .cta-button:focus {
+    background-color: #F5F5F5;
+    border-color: #F5F5F5;
+}
+
+/* ==================== EXTERNAL RESOURCES SECTION ==================== */
+.external-resources {
+    padding: 64px 0;
+    background-color: #FFFFFF;
+}
+
+.resource-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resource-list li {
+    margin-bottom: 16px;
+}
+
+.external-link {
+    display: inline-block;
+    color: #333333;
+    text-decoration: underline;
+    font-size: 1.125rem;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.external-link:hover,
+.external-link:focus {
+    color: #000000;
+    outline: 2px solid #333333;
+    outline-offset: 4px;
+}
+
+/* ==================== FOOTER SECTION ==================== */
+.site-footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 32px 0;
+    text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 16px;
+}
+
+.footer-nav {
+    margin-top: 16px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    opacity: 0.8;
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+/* ==================== MODAL POPUP ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: auto;
+    padding: 0;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: #F5F5F5;
+    border-bottom: 2px solid #D9D9D9;
+    border-radius: 6px 6px 0 0;
+}
+
+.modal-title {
+    margin: 0;
+    color: #000000;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #333333;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #D9D9D9;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.weather-content {
+    min-height: 100px;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.weather-item {
+    background-color: #F5F5F5;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.weather-label {
+    font-weight: 600;
+    color: #333333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.weather-value {
+    font-size: 1.25rem;
+    color: #000000;
+}
+
+/* ==================== RESOURCES PAGE ==================== */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.resource-card {
+    background-color: #F5F5F5;
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #333333;
+}
+
+.resource-card h3 {
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.resource-card p {
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.resource-card a {
+    color: #333333;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.resource-card a:hover,
+.resource-card a:focus {
+    color: #000000;
+}
+
+/* ==================== CONTACT FORM ==================== */
+.contact-section {
+    padding: 64px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    padding: 32px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #FFFFFF;
+    color: #333333;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: #333333;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-error {
+    color: #8B0000;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+.submit-btn {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 2px solid #333333;
+    padding: 16px 32px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #000000;
+    border-color: #000000;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.submit-btn:disabled {
+    background-color: #D9D9D9;
+    border-color: #D9D9D9;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.success-message {
+    background-color: #D4EDDA;
+    color: #155724;
+    padding: 16px;
+    border-radius: 4px;
+    border: 2px solid #C3E6CB;
+    margin-top: 16px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+/* Tablet devices */
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-controls {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .features-section,
+    .video-section,
+    .cta-section,
+    .external-resources,
+    .contact-section {
+        padding: 32px 0;
+    }
+
+    .feature-card,
+    .resource-card {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
+
+/* High contrast mode for users with visual impairments */
+@media (prefers-contrast: high) {
+    .nav-link,
+    .cta-button,
+    .control-btn {
+        border: 3px solid currentColor;
+    }
+
+    .feature-card,
+    .resource-card {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -5,7 +5,13 @@ import { CreatePost } from './screens/CreatePost';
 import { TipDetail } from './screens/TipDetail';
 import { Profile } from './screens/Profile';
 
+// Accessibility Website Pages
+import AccessHome from '../../accessibility-website/pages/Home';
+import AccessResources from '../../accessibility-website/pages/Resources';
+import AccessContact from '../../accessibility-website/pages/Contact';
+
 export const router = createBrowserRouter([
+  // Original App Routes
   {
     path: '/',
     Component: Home,
@@ -25,5 +31,18 @@ export const router = createBrowserRouter([
   {
     path: '/profile',
     Component: Profile,
+  },
+  // Accessibility Website Routes
+  {
+    path: '/accessibility',
+    Component: AccessHome,
+  },
+  {
+    path: '/accessibility/resources',
+    Component: AccessResources,
+  },
+  {
+    path: '/accessibility/contact',
+    Component: AccessContact,
   },
 ]);
