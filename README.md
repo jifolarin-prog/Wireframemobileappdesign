@@ -62,3 +62,50 @@ This project follows the four principles of accessibility (POUR):
 2. **Operable**: Full keyboard navigability and sufficient time for interactions.
 3. **Understandable**: Clear navigation, input assistance, and predictable UI behavior.
 4. **Robust**: Use of semantic markup to ensure compatibility with current and future user agents (including screen readers).
+Testing Process
+
+Testing was carried out throughout the development lifecycle rather than only at the end of the project.
+
+Functional Testing
+
+Each feature was tested individually to ensure it met the specified requirements.
+
+Feature	Expected Result	Actual Result	Status
+Navigation	Opens selected page	Successful	Pass
+Login Form	Accepts valid input	Successful	Pass
+Upload Button	Opens upload page	Successful	Pass
+Search Function	Returns matching content	Successful	Pass
+Profile Page	Displays user information	Successful	Pass
+Settings Page	Loads correctly	Successful	Pass
+Responsive Testing
+
+The application was tested using browser developer tools on multiple screen sizes.
+
+Device	Result
+Mobile	Pass
+Tablet	Pass
+Laptop	Pass
+Desktop	Pass
+
+The interface adapted correctly using responsive CSS layouts.
+
+Browser Testing
+Browser	Result
+Google Chrome	Pass
+Microsoft Edge	Pass
+Firefox	Pass
+
+No significant layout or functionality issues were identified.
+
+Accessibility Testing
+
+The following accessibility checks were completed:
+
+Keyboard navigation
+Colour contrast verification
+Readable font sizes
+Form labels
+Alternative image text
+Logical heading structure
+
+All tests confirmed the interface remained accessible and easy to navigate.
