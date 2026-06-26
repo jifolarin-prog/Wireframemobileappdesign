@@ -109,3 +109,7 @@ Alternative image text
 Logical heading structure
 
 All tests confirmed the interface remained accessible and easy to navigate.
+<img width="671" height="376" alt="image" src="https://github.com/user-attachments/assets/6abf3aef-386d-4287-b07e-
+   b28600e2b6fd" />
+   <img width="670" height="376" alt="image" src="https://github.com/user-attachments/assets/00eb3042-029d-4276-87e4-06cfe42ea9f0" />
+
