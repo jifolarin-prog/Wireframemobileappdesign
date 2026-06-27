@@ -112,7 +112,6 @@ All tests confirmed the interface remained accessible and easy to navigate.
 <img width="671" height="376" alt="image" src="https://github.com/user-attachments/assets/6abf3aef-386d-4287-b07e-
    b28600e2b6fd" />
    <img width="670" height="376" alt="image" src="https://github.com/user-attachments/assets/00eb3042-029d-4276-87e4-06cfe42ea9f0" />
-
 my first version 
 <img width="643" height="374" alt="image" src="https://github.com/user-attachments/assets/9a07fbcc-6819-4254-bdaa-f09753731522" />
 <img width="602" height="373" alt="image" src="https://github.com/user-attachments/assets/dec8ca8b-99e6-407f-848e-8ebfb4ed0dde" />
